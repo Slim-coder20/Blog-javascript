@@ -1,6 +1,6 @@
-a {
-   color: white;
-   background: red;
-   padding: 15px ;
-   
-}
+@use 'base.scss' as *; 
+@use 'classes.scss' as *;
+@use 'media-queries.scss' as *;
+@use 'reset.scss' as *;
+@use 'utils.scss' as * ;
+@use'variables.scss' as *; 
