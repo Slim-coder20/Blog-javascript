@@ -24,11 +24,18 @@ header {
   justify-content: space-between;
   align-items: center;
   .logo{
+    color:white;
+  }
+  .logo:hover{
     color:var(--logo);
   }
   a {
     color: white;
   }
+  a:hover{
+    color: var(--logo);
+  }
+
   .header-brand {
     font-size: 4rem;
     font-weight: 700;
