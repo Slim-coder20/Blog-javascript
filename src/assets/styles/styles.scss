@@ -32,6 +32,7 @@ header {
   }
   a {
     color: white;
+   
   }
   a:hover {
     color: var(--logo);
@@ -40,6 +41,9 @@ header {
   .header-brand {
     font-size: 4rem;
     font-weight: 700;
+     @include xs {
+      font-size: 2.5rem;
+    }
   }
   .header-menu {
     position: relative;
@@ -60,7 +64,7 @@ header {
         }
       }
     }
-    .header-menu-icon{
+    .header-menu-icon {
       display: none;
       font-size: 3rem;
       color: var(--logo);
@@ -77,11 +81,11 @@ header {
       padding: 3rem 1.5rem;
       width: 20rem;
       background: white;
-      ul{
+      ul {
         display: block;
-        li{
-          margin:2rem 0;
-          a{
+        li {
+          margin: 2rem 0;
+          a {
             color: var(--text);
           }
         }

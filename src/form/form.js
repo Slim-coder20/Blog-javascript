@@ -1,6 +1,7 @@
 // Importation des fichiers CSS pour le style
 import "./form.scss";
 import "../assets/styles/styles.scss";
+import "../assets/javascript/topbar.js";
 
 // === CONFIGURATION INITIALE ===
 // Récupération des éléments HTML nécessaires
