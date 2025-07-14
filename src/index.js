@@ -1,5 +1,6 @@
 // Importation des fichiers CSS pour le style de la page d'accueil
 import "./assets/styles/styles.scss";
+import './assets/javascript/topbar.js';
 import "./index.scss";
 
 // === AFFICHAGE DES ARTICLES SUR LA PAGE D'ACCUEIL ===

@@ -1,3 +1,5 @@
+@use './assets/styles/media-queries' as *; 
+
 .content {
   background: var(--divider);
   display: flex;
@@ -12,6 +14,9 @@
     .article {
       background: white;
       padding: 0 5rem;
+      @include xs {
+        padding: 0 2rem;
+      }
       border-radius: 0.3rem;
       margin-bottom: 5rem;
       display: flex;
