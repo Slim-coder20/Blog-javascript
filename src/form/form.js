@@ -56,7 +56,13 @@ form.addEventListener("submit", async (event) => {
 // === FONCTION DE VALIDATION ===
 const formIsValid = (article) => {
   // Vérification que tous les champs obligatoires sont remplis
-  if (!article.author || !article.category || !article.content) {
+  if (
+    !article.author ||
+    !article.category ||
+    !article.content ||
+    !article.title ||
+    !article.img
+  ) {
     errors.push("Vous devez renseigner tous les champs.");
   } else {
     // Si tout est OK, on vide le tableau d'erreurs

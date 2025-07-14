@@ -1,5 +1,5 @@
 .content {
-  background:var(--divider);
+  background: var(--divider);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,23 +7,23 @@
   .articles-container {
     max-width: 800px;
     width: 100%;
-    margin:  5rem 0 10rem 0; 
+    margin: 5rem 0 10rem 0;
     box-shadow: var(--box-shadow);
     .article {
       background: white;
       padding: 0 5rem;
       border-radius: 0.3rem;
+      margin-bottom: 5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-     
+
       img {
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
         margin-top: -3rem;
         border: 1px solid var(--logo);
-
       }
       h2 {
         color: var(--logo);
@@ -31,13 +31,14 @@
         margin-bottom: 0;
       }
       .article-author {
-        color:var(--hint);
+        color: var(--hint);
         margin-bottom: 3rem;
       }
-      .article-content{
+      .article-content {
         max-width: 550px;
+        white-space: pre-line;
       }
-      .article-action{
+      .article-action {
         width: 100%;
         display: flex;
         justify-content: flex-end;
@@ -48,7 +49,6 @@
           margin-left: 1rem;
         }
       }
-
     }
   }
 }
