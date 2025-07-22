@@ -1,6 +1,6 @@
 // Importation des fichiers CSS pour le style
-import "./form.scss";
 import "../assets/styles/styles.scss";
+import "./form.scss";
 import "../assets/javascript/topbar.js";
 
 // === CONFIGURATION INITIALE ===
@@ -8,6 +8,12 @@ import "../assets/javascript/topbar.js";
 const form = document.querySelector("form"); // Le formulaire HTML
 let errors = []; // Tableau pour stocker les erreurs de validation
 const errorElement = document.querySelector("#errors"); // Élément pour afficher les erreurs
+// Selection du btn annuler // 
+const btnCancel = document.querySelector(".btn-secondary");
+// mettre uen ecoute sur le bouton annuler avec une redirection vers le home pour renvoyer sur l'index // 
+btnCancel.addEventListener("click", () => {
+  location.assign("/index.html");
+});
 
 // === GESTION DE LA SOUMISSION DU FORMULAIRE ===
 form.addEventListener("submit", async (event) => {
@@ -33,6 +39,9 @@ form.addEventListener("submit", async (event) => {
           "Content-Type": "application/json", // Spécifie que nous envoyons du JSON
         },
       });
+      if (response.status < 299) {
+        location.assign("/index.html");
+      }
 
       // === GESTION DE LA RÉPONSE ===
       if (response.ok) {
@@ -56,6 +65,8 @@ form.addEventListener("submit", async (event) => {
 
 // === FONCTION DE VALIDATION ===
 const formIsValid = (article) => {
+  // On renitialise le tableau a un tableau vide 
+  errors = []; 
   // Vérification que tous les champs obligatoires sont remplis
   if (
     !article.author ||

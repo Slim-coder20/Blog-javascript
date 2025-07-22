@@ -1,6 +1,6 @@
 // Importation des fichiers CSS pour le style de la page d'accueil
 import "./assets/styles/styles.scss";
-import './assets/javascript/topbar.js';
+import "./assets/javascript/topbar.js";
 import "./index.scss";
 
 // === AFFICHAGE DES ARTICLES SUR LA PAGE D'ACCUEIL ===
@@ -19,11 +19,21 @@ const createArticles = (articles) => {
               alt="profile"
             />
             <h2>${article.title}</h2>
-            <p class="article-author">${article.author} - ${article.category}</p>
+          <p class="article-author">${article.author} - ${
+      // Création d'un objet Date à partir de la date de création de l'article et formatage en français
+      new Date(article.createdAt).toLocaleDateString("fr-FR", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })
+    }</p>
             <p class="article-content">${article.content}</p>
             <div class="article-action">
               
-              <button class="btn btn-danger" data-id="${article._id}" >Supprimer</button>
+              <button class="btn btn-danger" data-id="${
+                article._id
+              }" >Supprimer</button>
             </div>
          
           `;
